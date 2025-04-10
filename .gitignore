@@ -1,0 +1,92 @@
+# Environments
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.env/
+env.bak/
+venv.bak/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+
+# Django media and static files (if generated locally)
+media/
+staticfiles/
+static/
+
+# Local settings
+*.local
+*.env
+.env.*
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# MyPy / Pyre type checker
+.mypy_cache/
+.pyre/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Testing
+test-results/
+junit.xml
+
+# Build system files
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+*.manifest
+
+# Celery beat schedule file
+celerybeat-schedule
+
+# Docker
+*.pid
+
+# JetBrains
+.idea/
+
+# Others
+*.bak
+*.swp
+*.swo
+
+
+pasos_django_api_rest.txt
+
