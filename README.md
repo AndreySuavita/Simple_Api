@@ -20,8 +20,8 @@ This is a basic REST API project built with Django and Django REST Framework. It
 
 1. Clone the repository:
 ```bash
-git clone [REPOSITORY_URL]
-cd [DIRECTORY_NAME]
+git clone https://github.com/AndreySuavita/Simple_Api.git
+cd Simple_api_django
 ```
 
 2. Create and activate virtual environment:
@@ -60,12 +60,12 @@ python manage.py runserver
 
 ## API Endpoints
 
-### GET /api/modelos/
+### GET /api/mimodelo_get/
 - Get all objects
 - Method: GET
 - Response: List of objects
 
-### POST /api/modelos/
+### POST /api/mimodelo_post/
 - Create a new object
 - Method: POST
 - Request body:
@@ -76,7 +76,7 @@ python manage.py runserver
 }
 ```
 
-### PUT /api/modelos/{id}/
+### PUT /api/mimodelo_put_patch/{id}/
 - Update an entire object
 - Method: PUT
 - Request body:
@@ -87,18 +87,7 @@ python manage.py runserver
 }
 ```
 
-### PATCH /api/modelos/{id}/
-- Update specific fields of an object
-- Method: PATCH
-- Request body (optional fields):
-```json
-{
-    "nombre": "string",
-    "descripcion": "string"
-}
-```
-
-### DELETE /api/modelos/{id}/
+### DELETE /api/mimodelo_delete/{id}/
 - Delete an object
 - Method: DELETE
 
@@ -110,30 +99,45 @@ class MiModelo(models.Model):
     descripcion = models.TextField()
 ```
 
+### PATCH /api/mimodelo_put_patch/{id}/
+- Update specific fields of an object
+- Method: PATCH
+- Request body (optional fields):
+```json
+{
+    "nombre": "string",
+    "descripcion": "string"
+}
+```
+
 ## Usage Examples
 
 ### Create a new object
 ```bash
-curl -X POST http://localhost:8000/api/modelos/ \
+curl -X POST http://localhost:8000/api/mimodelo_post/ \
      -H "Content-Type: application/json" \
      -d '{"nombre": "Example", "descripcion": "Example description"}'
 ```
 
 ### Get all objects
 ```bash
-curl http://localhost:8000/api/modelos/
+curl http://localhost:8000/api/mimodelo_get/
 ```
 
 ### Update an object
 ```bash
-curl -X PUT http://localhost:8000/api/modelos/1/ \
+curl -X PUT http://localhost:8000/api/mimodelo_put_patch/1/ \
      -H "Content-Type: application/json" \
      -d '{"nombre": "New Name", "descripcion": "New description"}'
 ```
 
 ### Delete an object
 ```bash
-curl -X DELETE http://localhost:8000/api/modelos/1/
+curl -X DELETE http://localhost:8000/api/mimodelo_delete/1/
 ```
 
+### Update an object with patch
+```bash
+curl -X DELETE http://localhost:8000/api/mimodelo_put_patch/1/
+```
 
